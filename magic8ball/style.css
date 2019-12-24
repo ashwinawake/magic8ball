@@ -1,0 +1,23 @@
+body{
+    background-color: #1a53ff;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 800px;
+    max-width: 80%;
+}
+
+.question{
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.eightBall{
+    font-size: 50px;
+    font-weight: bold;
+  }
