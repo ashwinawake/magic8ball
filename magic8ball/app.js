@@ -2,6 +2,7 @@
 const input = document.getElementById("input");
 const submit = document.getElementById("submit");
 const answer = document.getElementById("answer");
+const bImage = document.getElementById("background-image");
 let answerDisplayed = false;
 
 
@@ -24,6 +25,12 @@ function printAnswer(answer1){
     answer.appendChild(newEl);
 }
 
+//Adjust background image dimensions IIFE
+
+(function adjustImage() {
+  bImage.style.width = "70%";
+  bImage.style.height = "auto";
+})()
 
 //Add Event listeners
 submit.addEventListener('click',function(){
