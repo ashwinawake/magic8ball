@@ -2,6 +2,7 @@
 const input = document.getElementById("input");
 const submit = document.getElementById("submit");
 const answer = document.getElementById("answer");
+let answerDisplayed = false;
 
 
 //Functions to update DOM.
@@ -26,6 +27,11 @@ function printAnswer(answer1){
 
 //Add Event listeners
 submit.addEventListener('click',function(){
+    if(answerDisplayed){
+        return;
+    } else {
+     answerDisplayed = true;   
     let textVal = input.value;
     fetchAnswer(textVal);
+    }
 });
