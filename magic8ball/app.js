@@ -29,9 +29,14 @@ function printAnswer(answer1){
 submit.addEventListener('click',function(){
     if(answerDisplayed){
         return;
-    } else {
-     answerDisplayed = true;   
+    } else {  
     let textVal = input.value;
+    if(!textVal){
+        alert('Please enter a valid question!!')
+    }else{
+    answerDisplayed = true; 
     fetchAnswer(textVal);
     }
+    }
 });
+
