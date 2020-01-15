@@ -38,8 +38,20 @@ form{
 
 #reset{
     margin-left: 10px;
+    background-color: chocolate;
 }
- input{
+
+#submit{
+     background-color: darkgreen;
+}
+
+input{
      border-width: medium;
      border-color: black;
  }
+
+ button{
+    border-width: medium;
+    border-color: black;
+ }
+
