@@ -1,12 +1,10 @@
 //declare all variables
 const input = document.getElementById("input");
 const submit = document.getElementById("submit");
-const reset = document.getElementById("reset");
 const answer = document.getElementById("answer");
 const bImage = document.getElementById("background-image");
 let answerDisplayed = false;
-let resetTextNode = document.createTextNode('Reset');
-let submitTextNode = document.createTextNode('Submit');
+
 
 //Functions to update DOM.
 function fetchAnswer(params){
@@ -16,8 +14,7 @@ function fetchAnswer(params){
     fetch(uri)
         .then(response => response.json())
         .then(data =>{console.log(data.magic.answer);
-                      printAnswer(data.magic.answer)})
-        .then(buttonChange());
+                      printAnswer(data.magic.answer)});
 
 }
 
@@ -35,13 +32,6 @@ function printAnswer(answer1){
   bImage.style.height = "auto";
 })()
 
-//Change button
-
-function buttonChange() {
-   submit.replaceChild(resetTextNode, submitTextNode);
-}
-
-
 //Add Event listeners
 submit.addEventListener('click',function(){
     if(answerDisplayed){
@@ -57,7 +47,3 @@ submit.addEventListener('click',function(){
     }
 });
 
-//Refresh page
-reset.addEventListener('click', () => {
-    window.location.reload();
-});
