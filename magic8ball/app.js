@@ -20,6 +20,7 @@ function fetchAnswer(params){
 }
 
 function printAnswer(answer1){
+    answer1 = answer1+'.';
     let newEl = document.createElement('span');
     let newAns = document.createTextNode(answer1);
     newEl.appendChild(newAns);
