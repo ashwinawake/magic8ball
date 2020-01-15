@@ -1,6 +1,7 @@
 //declare all variables
 const input = document.getElementById("input");
 const submit = document.getElementById("submit");
+const reset = document.getElementById("reset");
 const answer = document.getElementById("answer");
 const bImage = document.getElementById("background-image");
 let answerDisplayed = false;
@@ -47,3 +48,6 @@ submit.addEventListener('click',function(){
     }
 });
 
+reset.addEventListener('click', () => {
+    window.location.reload();
+});
