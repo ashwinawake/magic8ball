@@ -35,3 +35,7 @@ form{
     font-size: 50px;
     font-weight: bold;
   }
+
+#reset{
+    margin-left: 10px;
+}
