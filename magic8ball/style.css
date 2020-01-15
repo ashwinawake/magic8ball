@@ -39,3 +39,7 @@ form{
 #reset{
     margin-left: 10px;
 }
+ input{
+     border-width: medium;
+     border-color: black;
+ }
