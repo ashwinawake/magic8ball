@@ -27,15 +27,7 @@ function printAnswer(answer1){
     answer.appendChild(newEl);
 }
 
-//Adjust background image dimensions IIFE
-
-(function adjustImage() {
-  bImage.style.width = "70%";
-  bImage.style.height = "auto";
-})()
-
-//Add Event listeners
-submit.addEventListener('click',function(){
+function getAnswer() {
     if(answerDisplayed){
         return;
     } else {  
@@ -47,8 +39,27 @@ submit.addEventListener('click',function(){
     fetchAnswer(textVal);
     }
     }
+}
+
+//Adjust background image dimensions IIFE
+
+(function adjustImage() {
+  bImage.style.width = "70%";
+  bImage.style.height = "auto";
+})()
+
+//Add Event listeners
+submit.addEventListener('click',() => {
+    getAnswer();
 });
 
 reset.addEventListener('click', () => {
     window.location.reload();
+});
+
+input.addEventListener('keypress', (e) =>{
+    if(e.key==='Enter'){
+   e.preventDefault();     
+   getAnswer();
+    }
 });
